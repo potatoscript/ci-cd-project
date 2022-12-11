@@ -1,5 +1,5 @@
-name: Continuous Integration and Deployment 
- 
+name: Continuous Integration and Deployment
+
 on:
   push:
     branches:
@@ -14,10 +14,11 @@ jobs:
 
       - name: Set up .NET
         uses: xt0rted/setup-dotnet@v1.0.0
-        with: dotnet-version: 6.0.201
+        with:
+          dotnet-version: 6.0.201
 
       - name: Restore dependencies
         run: dotnet restore
-        
+
       - name: Build app
-        run: dotnet build -c Release --no-restore  
+        run: dotnet build -c Release --no-restore
